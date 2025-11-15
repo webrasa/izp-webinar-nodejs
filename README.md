@@ -32,28 +32,28 @@
 - Osnovne NVM komande
     - Instalacija najnovije verzije
 
-    nvm install node
+        nvm install node
 
     - Instalacija specifične verzije
 
-    nvm install 18.17.0
+        nvm install 18.17.0
 
     - Listanje instaliranih verzija
 
-    nvm list
+        nvm list
 
     - Korišćenje specifične verzije
 
-    nvm use 18.17.0
+        nvm use 18.17.0
 
     - Postavljanje default verzije
 
-    nvm alias default 18.17.0
+        nvm alias default 18.17.0
 
     - Provera trenutne verzije
 
-    node --version
-    npm --version
+        node --version
+        npm --version
 
 ## Mongodb
 
@@ -87,7 +87,7 @@
 
 ## Instalacija neophodnih paketa
 
- npm install
+    npm install
 
 # Env fajl
 Kreirati .env fajl u root direktorijumu projekta sa sledećim sadržajem:
