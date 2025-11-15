@@ -31,21 +31,27 @@
 
 - Osnovne NVM komande
     - Instalacija najnovije verzije
+
     nvm install node
 
     - Instalacija specifične verzije
+
     nvm install 18.17.0
 
     - Listanje instaliranih verzija
+
     nvm list
 
     - Korišćenje specifične verzije
+
     nvm use 18.17.0
 
     - Postavljanje default verzije
+
     nvm alias default 18.17.0
 
     - Provera trenutne verzije
+
     node --version
     npm --version
 
@@ -53,23 +59,30 @@
 
 - Instalacija
   - Ubuntu
+
         sudo apt update
         sudo apt install -y mongodb
+
   - Windows
     - <https://www.mongodb.com/try/download/community>.
 
 - Startovanje Mongodb
   - Ubuntu
+
         sudo systemctl start mongodb
   - Windows
     - Pokrenuti "MongoDB
 
 - Proveriti da li je sve pokrenuto
+
     sudo systemctl status mongod
 
 - Pristupanje mongo shell-u
+
     mongosh
+
 - Kreiranje baze podataka
+
     use blog-api
 
 ## Instalacija neophodnih paketa
