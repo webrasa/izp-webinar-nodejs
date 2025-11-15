@@ -2,6 +2,53 @@
 
 # Zahtevi
 
+- Node.js v14 ili noviji
+- Mongodb v4 ili noviji
+
+## Node.js
+- Instalacija
+  - Ubuntu
+        curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+  - Windows
+    - <https://nodejs.org/en/download/>
+
+- Instalacija NVM
+    - Ubuntu
+            curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+            source ~/.bashrc
+            ili
+            wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+            source ~/.bashrc
+
+            nvm --version
+
+            nvm install --lts
+
+            node -v
+    - Windows
+        - https://github.com/coreybutler/nvm-windows
+
+- Osnovne NVM komande
+    - Instalacija najnovije verzije
+    nvm install node
+
+    - Instalacija specifične verzije
+    nvm install 18.17.0
+
+    - Listanje instaliranih verzija
+    nvm list
+
+    - Korišćenje specifične verzije
+    nvm use 18.17.0
+
+    - Postavljanje default verzije
+    nvm alias default 18.17.0
+
+    - Provera trenutne verzije
+    node --version
+    npm --version
+
 ## Mongodb
 
 - Instalacija
