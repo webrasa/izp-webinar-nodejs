@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "0babc2e5-ea97-40c0-8df6-226cd9511725",
+		"name": "IZP blog API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10966213"
+	},
+	"item": [
+		{
+			"name": "Kreiraj clanak",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Uvod u Node.js\",\n    \"content\": \"Node.js je moćan runtime za server-side JavaScript...\",\n    \"author\": \"Marko Marković\",\n    \"tags\": [\"nodejs\", \"javascript\"],\n    \"published\": true\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"articles"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:5000/api/articles \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"title\": \"Uvod u Node.js\",\n    \"content\": \"Node.js je moćan runtime za server-side JavaScript...\",\n    \"author\": \"Marko Marković\",\n    \"tags\": [\"nodejs\", \"javascript\"],\n    \"published\": true\n  }'\ncurl http://localhost:5000/api/articles\ncurl \"http://localhost:5000/api/articles?page=1&limit=5\"\ncurl \"http://localhost:5000/api/articles?author=Marko%20Marković\"\ncurl \"http://localhost:5000/api/articles?search=Node.js\"\ncurl \"http://localhost:5000/api/articles?published=true\"\ncurl \"http://localhost:5000/api/articles?tag=nodejs\""
+			},
+			"response": []
+		},
+		{
+			"name": "Dobavi sve clanke",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/articles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"articles"
+					]
+				},
+				"description": "Generated from cURL: curl <http://localhost:5000/api/articles>"
+			},
+			"response": []
+		},
+		{
+			"name": "Paginacija",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/articles?page=1&limit=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl \"<http://localhost:5000/api/articles?page=1&limit=5>\""
+			},
+			"response": []
+		},
+		{
+			"name": "Filter po autoru",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/articles?author=Marko%20Marković",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "Marko%20Marković"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl \"<http://localhost:5000/api/articles?author=Marko%20Marković>\""
+			},
+			"response": []
+		},
+		{
+			"name": "Pretraga",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/articles?search=Node.js",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "Node.js"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl \"<http://localhost:5000/api/articles?search=Node.js>\""
+			},
+			"response": []
+		},
+		{
+			"name": "Samo objavljeni",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/articles?published=true",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "published",
+							"value": "true"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl \"<http://localhost:5000/api/articles?published=true>\""
+			},
+			"response": []
+		},
+		{
+			"name": "Filter po tag-u",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/articles?tag=nodejs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"articles"
+					],
+					"query": [
+						{
+							"key": "tag",
+							"value": "nodejs"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl \"<http://localhost:5000/api/articles?tag=nodejs>\""
+			},
+			"response": []
+		}
+	]
+}
