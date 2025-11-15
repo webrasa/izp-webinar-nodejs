@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+
+const authorize = require('../middleware/authorize');
+
 const {
   getArticles,
   getArticle,
@@ -10,7 +13,7 @@ const {
 
 router.route('/')
   .get(getArticles)
-  .post(createArticle);
+  .post(authorize, createArticle);
 
 router.route('/:id')
   .get(getArticle)
